@@ -2681,7 +2681,6 @@ class VisionProviderSelectionDialog(SettingsDialog):
 			# The list of providers has not been populated yet, so we didn't change anything in this panel
 			return
 
-		log.error(self._state)
 		for name, roles in self._state.iteritems():
 			if roles and not vision.handler.setProvider(name, *roles):
 				# Translators: This message is presented when
